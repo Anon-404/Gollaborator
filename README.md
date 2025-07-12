@@ -68,18 +68,14 @@ Download the appropriate binary for your system from the official site:
 
 ## 👨‍💻 Author
 
-William Steven @Anon-404
-
-🔗 Telegram: @Anon4004
-
-
+**William Steven** [@Anon-404](https://github.com/Anon-404)  
+🔗 Telegram: [@Anon4004](https://t.me/Anon4004)
 
 ---
 
 ## 📜 License
 
 This project is licensed under the MIT License — feel free to use, modify, and share.
-
 
 ---
 
