@@ -35,6 +35,17 @@ Gollaborator
 
 ---
 
+📥 Cloudflare Tunnel Binary (Optional)
+
+If automatic Cloudflare Tunnel startup fails, you may need to install it manually.
+Download the appropriate binary for your system from the official site:
+
+👉 Cloudflare Tunnel Downloads
+
+> ℹ️ Make sure to download and install the binary based on your system architecture (e.g., amd64, arm, etc.).
+
+---
+
 ## 📸 Sample Output
 
 ![Gollaborator Demo](assets/Screenshot_20250712_133325_Termux.jpg)
