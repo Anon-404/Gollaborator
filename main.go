@@ -14,16 +14,6 @@ import (
 const (
 	Reset   = "\033[0m"
 
-	// Regular Colors
-	Black   = "\033[30m"
-	Red     = "\033[31m"
-	Green   = "\033[32m"
-	Yellow  = "\033[33m"
-	Blue    = "\033[34m"
-	Magenta = "\033[35m"
-	Cyan    = "\033[36m"
-	White   = "\033[37m"
-
 	// Bright Colors
 	BrightBlack   = "\033[90m"
 	BrightRed     = "\033[91m"
@@ -36,7 +26,6 @@ const (
 
 	// Styles
 	Bold      = "\033[1m"
-	Underline = "\033[4m"
 )
 
 var requestCount int
@@ -90,6 +79,40 @@ func startTunnel(port string) {
 
 	fmt.Println(Bold + BrightBlue + "🌐 Cloudflare tunnel running..." + Reset)
 	fmt.Println(Bold + BrightGreen + "🔒 Private URL :" + Bold + BrightCyan + " http://localhost:" + port + Reset)
+}
+
+func checkAndInstallCloudflared() {
+	_, err := exec.LookPath("cloudflared")
+	if err == nil {
+		fmt.Println(Bold + BrightGreen + "✔️  Cloudflared found" + Reset)
+		return
+	}
+
+	fmt.Println(Bold + BrightYellow + "⚠️   Cloudflared not found. Installing..." + Reset)
+
+	// Try installing with package managers
+	if _, err := exec.LookPath("pkg"); err == nil {
+		// Termux
+		cmd := exec.Command("pkg", "install", "-y", "cloudflared")
+		cmd.Stdout = os.Stdout
+		cmd.Stderr = os.Stderr
+		cmd.Run()
+	} else if _, err := exec.LookPath("pacman"); err == nil {
+		// Arch/Artix
+		cmd := exec.Command("sudo", "pacman", "-Sy", "--noconfirm", "cloudflared")
+		cmd.Stdout = os.Stdout
+		cmd.Stderr = os.Stderr
+		cmd.Run()
+	} else if _, err := exec.LookPath("apt"); err == nil {
+		// Debian/Ubuntu
+		cmd := exec.Command("sudo", "apt", "install", "-y", "cloudflared")
+		cmd.Stdout = os.Stdout
+		cmd.Stderr = os.Stderr
+		cmd.Run()
+	} else {
+		fmt.Println(Bold + BrightRed + "❌ Could not detect package manager. Please install cloudflared manually." + Reset)
+		os.Exit(1)
+	}
 }
 
 func handle(w http.ResponseWriter, r *http.Request) {
@@ -150,6 +173,7 @@ func main() {
 	cmd.Run()
 
 	printBanner()
+	checkAndInstallCloudflared()
 
 	port := "4444"
 	fmt.Println(Bold + BrightYellow + "🚀 Starting Collaborator server..." + Reset)
