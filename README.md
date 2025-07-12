@@ -43,11 +43,11 @@ Gollaborator
 
 ## 🧠 Upcoming Modules
 
-[ ] DNS Request Logging (📡 under development)
+- DNS Request Logging (📡 under development)
 
-[ ] SMTP Trap (📩 coming soon)
+- SMTP Trap (📩 coming soon)
 
-[ ] UI Panel for logs (Optional)
+- UI Panel for logs (Optional)
 
 ---
 
