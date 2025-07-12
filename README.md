@@ -40,7 +40,7 @@ Gollaborator
 
 ## 📸 Sample Output
 
-![Gollaborator Demo](assets/demo.gif)
+![Gollaborator Demo](assets/Screenshot_20250712_133325_Termux.jpg)
 
 ---
 
