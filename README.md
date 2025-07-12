@@ -21,7 +21,7 @@ go run main.go
 
 ---
 
-⚙️ Method 2: Go Install and Move Binary
+### ⚙️ Method 2: Go Install and Move Binary
 
 ✅ For Linux & Termux
 
@@ -33,9 +33,6 @@ Gollaborator
 
 > 🔁 Now you can run Gollaborator from anywhere in the terminal!
 
-
-
-
 ---
 
 ## 📸 Sample Output
@@ -44,9 +41,7 @@ Gollaborator
 
 ---
 
-🧠 Upcoming Modules
-
-[x] HTTP Logger
+## 🧠 Upcoming Modules
 
 [ ] DNS Request Logging (📡 under development)
 
@@ -54,15 +49,13 @@ Gollaborator
 
 [ ] UI Panel for logs (Optional)
 
-
-
 ---
 
 ## 👨‍💻 Author
 
 William Steven @Anon-404
 
-🔗 Telegram: @Anon404Dev
+🔗 Telegram: @Anon4004
 
 
 
