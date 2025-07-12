@@ -31,7 +31,7 @@ const (
 var requestCount int
 
 func printBanner() {
-	fmt.Println(Bold + BrightWhite + "────────────────────────────────────────────────────────────────────────────" + Reset)
+	fmt.Println(Bold + BrightWhite + "____________________________________________________________________________" + Reset)
 	fmt.Println(Bold + BrightCyan + `
    .aMMMMP .aMMMb  dMP     dMP     .aMMMb  dMMMMb 
   dMP"    dMP"dMP dMP     dMP     dMP"dMP dMP"dMP 
@@ -45,7 +45,7 @@ VMMMP"  VMMMP" dMMMMMP dMMMMMP dMP dMP dMMMMP"
 dMP.aMP dMP"AMF dMP dMP   dMP   dMP.aMP dMP"AMF   
 VMMMP" dMP dMP dMP dMP   dMP    VMMMP" dMP dMP    ` + Reset)
 	fmt.Println(Bold + BrightGreen + "                        William Steven (Anon404)" + Reset)
-	fmt.Println(Bold + BrightWhite + "────────────────────────────────────────────────────────────────────────────" + Reset)
+	fmt.Println(Bold + BrightWhite + "____________________________________________________________________________" + Reset)
 }
 
 func startTunnel(port string) {
